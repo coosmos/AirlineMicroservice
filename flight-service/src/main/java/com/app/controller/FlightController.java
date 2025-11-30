@@ -25,7 +25,7 @@ public class FlightController {
     @PostMapping
     public ResponseEntity<?> addFlight( @Valid @RequestBody FlightRequestDTO request) {
         FlightResponseDTO response= flightService.addFlight(request);
-      return  new ResponseEntity<>(response, HttpStatus.CREATED); //note for future , responseEntity has a factory method that returns an object
+      return  new ResponseEntity<>(HttpStatus.CREATED); //note for future , responseEntity has a factory method that returns an object
     }
 
     @GetMapping

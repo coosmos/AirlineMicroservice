@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>  <!-- ✅ Changed from 3.5.8 -->
+        <version>3.2.5</version>
         <relativePath/>
     </parent>
 
@@ -43,13 +43,13 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Eureka Client (to register with Eureka Server) -->
+        <!-- Eureka Client  -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!-- OpenFeign (to call flight-service) -->
+        <!-- OpenFeign -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
