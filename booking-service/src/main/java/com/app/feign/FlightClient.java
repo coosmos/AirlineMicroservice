@@ -1,6 +1,7 @@
 package com.app.feign;
 
 
+import com.app.dto.FlightResponseDTO;
 import com.app.entity.FlightWrapper;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,13 +21,13 @@ import java.util.List;
 public interface FlightClient {
 
     @GetMapping("/api/flight/search")
-     List<FlightWrapper>  searchFlights(@RequestParam String source,
-                                        @RequestParam String destination,
-                                        @RequestParam LocalDate date
+     List<FlightResponseDTO>  searchFlights(@RequestParam String source,
+                                            @RequestParam String destination,
+                                            @RequestParam LocalDate date
                                         );
 
     @GetMapping("/api/flight/{flightNumber}")
-    FlightWrapper getFlightbyNumber(@PathVariable String flightNumber); 
+    FlightResponseDTO getFlightbyNumber(@PathVariable String flightNumber);
 
 
 }

@@ -1,7 +1,7 @@
 package com.app.feign;
 
 
-import com.app.entity.FlightWrapper;
+import com.app.dto.FlightResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -14,12 +14,12 @@ public class FlightClientFallback implements FlightClient {
 
 
     @Override
-    public List<FlightWrapper> searchFlights(String source, String destination, LocalDate date) {
+    public List<FlightResponseDTO> searchFlights(String source, String destination, LocalDate date) {
         return List.of();
     }
 
     @Override
-    public FlightWrapper getFlightbyNumber(String flightNumber) {
+    public FlightResponseDTO getFlightbyNumber(String flightNumber) {
         return null;
     }
 }
