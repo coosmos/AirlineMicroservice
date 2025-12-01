@@ -4,6 +4,8 @@ import com.app.feign.FlightClient;
 import com.app.dto.*;
 import com.app.entity.Booking;
 import com.app.entity.Passenger;
+import com.app.event.BookingConfirmedEvent;
+import com.app.event.PassengerInfo;
 import com.app.event.SeatBookedEvent;
 import com.app.exception.BookingNotFoundException;
 import com.app.repository.BookingRepository;
@@ -28,9 +30,10 @@ public class BookingService {
     private FlightClient flightClient;
 
     @Autowired
-    private KafkaTemplate<String, SeatBookedEvent > kafkaTemplate;
+    private KafkaTemplate<String, SeatBookedEvent> seatBookedKafkaTemplate;
 
-    private static final String TOPIC = "seat-booked-topic";
+    @Autowired
+    private KafkaTemplate<String, BookingConfirmedEvent> bookingConfirmedKafkaTemplate;
 
     // Create booking
     @Transactional
@@ -38,7 +41,6 @@ public class BookingService {
 
         // 1. Validate flight exists and has seats available (via Feign)
         FlightResponseDTO flight = flightClient.getFlightbyNumber(requestDTO.getFlightNumber());
-
 
         int requestedSeats = requestDTO.getPassengers().size();
 
@@ -83,17 +85,42 @@ public class BookingService {
         // 6. Save booking
         Booking savedBooking = bookingRepository.save(booking);
 
-        // 7. Publish Kafka event to reduce seat count
-        SeatBookedEvent event = new SeatBookedEvent(
+        // 7. Publish SeatBookedEvent (for flight-service to reduce seats)
+        SeatBookedEvent seatEvent = new SeatBookedEvent(
                 requestDTO.getFlightNumber(),
                 requestedSeats,
                 pnr
         );
+        seatBookedKafkaTemplate.send("seat-booked-topic", seatEvent);
+        System.out.println(" SeatBookedEvent published: " + seatEvent);
 
-        kafkaTemplate.send(TOPIC, event);
-        System.out.println("✅ Kafka event published: " + event);
+        // 8. Publish BookingConfirmedEvent (for email-service to send email)
+        List<PassengerInfo> passengerInfos = requestDTO.getPassengers().stream()
+                .map(p -> new PassengerInfo(
+                        p.getFirstName(),
+                        p.getLastName(),
+                        p.getAge(),
+                        p.getGender()
+                ))
+                .collect(Collectors.toList());
 
-        // 8. Return response
+        BookingConfirmedEvent confirmedEvent = new BookingConfirmedEvent(
+                pnr,
+                flight.getFlightNumber(),
+                flight.getAirline(),
+                flight.getSource(),
+                flight.getDestination(),
+                flight.getDepartureTime(),
+                passengerInfos,
+                totalPrice,
+                requestDTO.getContactEmail(),
+                requestDTO.getContactPhone()
+        );
+
+        bookingConfirmedKafkaTemplate.send("booking-confirmed", confirmedEvent);
+        System.out.println(" BookingConfirmedEvent published for PNR: " + pnr);
+
+        // 9. Return response
         return mapToResponseDTO(savedBooking);
     }
 
@@ -105,17 +132,6 @@ public class BookingService {
                 .map(this::mapToResponseDTO)
                 .collect(Collectors.toList());
     }
-
-    // Get booking by PNR
-    public BookingResponseDTO getBookingByPnr(String pnr) {
-        Booking booking = bookingRepository.findByPnr(pnr)
-                .orElseThrow(() -> new BookingNotFoundException(
-                        "Booking not found with PNR: " + pnr));
-
-        return mapToResponseDTO(booking);
-    }
-
-    // Cancel booking
     @Transactional
     public BookingResponseDTO cancelBooking(String pnr) {
         Booking booking = bookingRepository.findByPnr(pnr)
@@ -134,6 +150,16 @@ public class BookingService {
 
         return mapToResponseDTO(updatedBooking);
     }
+
+    // Get booking by PNR
+    public BookingResponseDTO getBookingByPnr(String pnr) {
+        Booking booking = bookingRepository.findByPnr(pnr)
+                .orElseThrow(() -> new BookingNotFoundException(
+                        "Booking not found with PNR: " + pnr));
+
+        return mapToResponseDTO(booking);
+    }
+
     // Helper: Generate random PNR
     private String generatePNR() {
         String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
