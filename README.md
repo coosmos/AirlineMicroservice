@@ -82,6 +82,9 @@ This project contains **5 microservices + Kafka**:
 
 ---
 
+<img width="1334" height="516" alt="image" src="https://github.com/user-attachments/assets/b46af3db-aeef-4b92-945b-9338cce186ec" />
+
+
 ##  Tech Stack
 
 | Layer | Technology |
