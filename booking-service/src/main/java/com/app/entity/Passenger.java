@@ -1,53 +1,40 @@
 package com.app.entity;
 
-import com.app.entity.BaseEntity;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "passengers")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Passenger extends BaseEntity {
+public class Passenger {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "booking_id", nullable = false)
-    private Booking booking;
+    @Column(nullable = false)
+    private String firstName;
 
-    @Column(name = "passenger_name", nullable = false, length = 100)
-    private String passengerName;
+    @Column(nullable = false)
+    private String lastName;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "gender", nullable = false, length = 10)
-    private Gender gender;
-
-    @Column(name = "age", nullable = false)
+    @Column(nullable = false)
     private Integer age;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "meal_preference", length = 20)
-    private MealPreference mealPreference;
+    @Column(nullable = false)
+    private String gender;
 
-    @Column(name = "seat_number", nullable = false, length = 10)
-    private String seatNumber;
+    private String email;
 
+    private String phoneNumber;
 
-    public enum Gender {
-        MALE,
-        FEMALE,
-        OTHER
-    }
-
-    public enum MealPreference {
-        VEG,
-        NON_VEG,
-        NONE
-    }
+    @ManyToOne
+    @JoinColumn(name = "booking_id")
+    private Booking booking;
 }
