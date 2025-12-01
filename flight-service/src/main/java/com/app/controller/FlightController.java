@@ -29,7 +29,7 @@ public class FlightController {
     }
 
     @GetMapping
-    public ResponseEntity<List<FlightResponseDTO>> getFlights(@Valid @RequestBody FlightRequestDTO request) {
+    public ResponseEntity<List<FlightResponseDTO>> getFlights() {
         return ResponseEntity.ok(flightService.getAllFlights());
     }
 
@@ -52,8 +52,6 @@ public class FlightController {
         FlightResponseDTO flight = flightService.getFlightByNumber(flightNumber);
         return ResponseEntity.ok(flight);
     }
-
-
 
 
 }
