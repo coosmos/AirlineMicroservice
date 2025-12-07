@@ -1,0 +1,113 @@
+{
+  "info": {
+    "_postman_id": "863eacfe-a9f7-426e-8b23-bf46ed5e3e46",
+    "name": "flightMicroservice",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "createBooking",
+      "id": "d16e042c-9826-4cf5-baa9-92e6912b2aa6",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"flightNumber\": \"AI-203\",\r\n  \"contactEmail\": \"testuser2@gmail.com\",\r\n  \"contactPhone\": \"9876543212\",\r\n  \"passengers\": [\r\n    {\r\n      \"firstName\": \"Ashu\",\r\n      \"lastName\": \"Singh\",\r\n      \"age\": 24,\r\n      \"gender\": \"MALE\",\r\n      \"email\": \"ashu@example.com\",\r\n      \"phoneNumber\": \"9876543212\"\r\n    },\r\n    {\r\n      \"firstName\": \"Ankiit\",\r\n      \"lastName\": \"Vermaa\",\r\n      \"age\": 23,\r\n      \"gender\": \"MALE\",\r\n      \"email\": \"ankiit@example.com\",\r\n      \"phoneNumber\": \"9123456749\"\r\n    }\r\n  ]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "bookings"
+          ]
+        }
+      }
+    },
+    {
+      "name": "cancelBooking",
+      "id": "0bfb8097-fe0c-4de0-aa85-f123bd6aad2c",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "http://localhost:8084/api/bookings/PNRAPRI73/cancel",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "bookings",
+            "PNRAPRI73",
+            "cancel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "getAllFlights",
+      "id": "504979f8-25c1-47d4-8b7d-a8383316b899",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:9090/api/flight",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "api",
+            "flight"
+          ]
+        }
+      }
+    },
+    {
+      "name": "createBooking",
+      "id": "89dacc10-9979-4354-98db-c35f939a3030",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"flightNumber\": \"AI-203\",\r\n  \"contactEmail\": \"testuser2@gmail.com\",\r\n  \"contactPhone\": \"9876543212\",\r\n  \"passengers\": [\r\n    {\r\n      \"firstName\": \"Harry\",\r\n      \"lastName\": \"Potter\",\r\n      \"age\": 24,\r\n      \"gender\": \"MALE\",\r\n      \"email\": \"Harry@example.com\",\r\n      \"phoneNumber\": \"9836543212\"\r\n    },\r\n    {\r\n      \"firstName\": \"hermione\",\r\n      \"lastName\": \"Granger\",\r\n      \"age\": 23,\r\n      \"gender\": \"FEMALE\",\r\n      \"email\": \"Kirti@example.com\",\r\n      \"phoneNumber\": \"9123456729\"\r\n    }\r\n  ]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9090/api/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "api",
+            "bookings"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "4b72afa9-2246-4773-bd4a-47f0665f3599",
+      "key": "base-url",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
