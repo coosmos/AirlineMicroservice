@@ -1,5 +1,22 @@
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Microservices](https://img.shields.io/badge/Microservices-000000?style=for-the-badge&logo=googlecloud&logoColor=white)
 
-# ---- Flight Booking Microservices System---
+
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=for-the-badge&logo=apachekafka&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Eureka](https://img.shields.io/badge/Eureka_Server-4B0082?style=for-the-badge)
+![API Gateway](https://img.shields.io/badge/API_Gateway-FF6F00?style=for-the-badge)
+
+
+
+
+
+
+## ---- Flight Booking Microservices System---
 
 A fully functional microservices-based flight booking system built with **Spring Boot**, **Eureka**, **Kafka**, **Spring Cloud Gateway**, and **Mailtrap SMTP**.
 
@@ -186,9 +203,7 @@ DATABASE SCHEMA
 4. Email notifications
 5. API Gateway routing
 6. Eureka discovery
-7. Secrets externalized
-8. Seat management logic
-9. Production-style folder structure
+7. Packaged the Application in docker
 
  
 
