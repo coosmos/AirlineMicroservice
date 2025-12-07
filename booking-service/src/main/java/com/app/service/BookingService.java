@@ -35,11 +35,9 @@ public class BookingService {
     @Autowired
     private KafkaTemplate<String, BookingConfirmedEvent> bookingConfirmedKafkaTemplate;
 
-    // Create booking
     @Transactional
     public BookingResponseDTO createBooking(BookingRequestDTO requestDTO) {
 
-        // 1. Validate flight exists and has seats available (via Feign)
         FlightResponseDTO flight = flightClient.getFlightbyNumber(requestDTO.getFlightNumber());
 
         int requestedSeats = requestDTO.getPassengers().size();
@@ -49,13 +47,10 @@ public class BookingService {
                     + flight.getAvailableSeats() + " seats left.");
         }
 
-        // 2. Generate unique PNR
         String pnr = generatePNR();
 
-        // 3. Calculate total price
         Double totalPrice = flight.getPrice() * requestedSeats;
 
-        // 4. Create Booking entity
         Booking booking = Booking.builder()
                 .pnr(pnr)
                 .flightNumber(requestDTO.getFlightNumber())
@@ -67,7 +62,6 @@ public class BookingService {
                 .passengers(new ArrayList<>())
                 .build();
 
-        // 5. Create Passenger entities
         List<Passenger> passengers = requestDTO.getPassengers().stream()
                 .map(passengerDTO -> Passenger.builder()
                         .firstName(passengerDTO.getFirstName())
@@ -160,7 +154,6 @@ public class BookingService {
         return mapToResponseDTO(booking);
     }
 
-    // Helper: Generate random PNR
     private String generatePNR() {
         String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         Random random = new Random();
@@ -173,7 +166,6 @@ public class BookingService {
         return pnr.toString();
     }
 
-    // Helper: Map Entity to DTO
     private BookingResponseDTO mapToResponseDTO(Booking booking) {
 
         List<PassengerDTO> passengerDTOs = booking.getPassengers().stream()

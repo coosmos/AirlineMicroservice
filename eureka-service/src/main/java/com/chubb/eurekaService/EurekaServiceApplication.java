@@ -1,4 +1,4 @@
-package com.chubb.eureka_service;
+package com.chubb.eurekaService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

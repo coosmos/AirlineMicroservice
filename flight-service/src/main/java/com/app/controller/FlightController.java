@@ -33,17 +33,15 @@ public class FlightController {
         return ResponseEntity.ok(flightService.getAllFlights());
     }
 
-    @GetMapping("/search")
+
+    @PostMapping("/search")
     public ResponseEntity<List<FlightResponseDTO>> searchFlights(
-            @RequestParam String source,
-            @RequestParam String destination,
-            @RequestParam(required = false) String date) {
+            @Valid @RequestBody FlightSearchDTO searchDTO) {
 
-        FlightSearchDTO searchDTO = new FlightSearchDTO(source, destination, date);
         List<FlightResponseDTO> flights = flightService.searchFlights(searchDTO);
-
         return ResponseEntity.ok(flights);
     }
+
 
     @GetMapping("/{flightNumber}")
     public ResponseEntity<FlightResponseDTO> getFlightByNumber(
