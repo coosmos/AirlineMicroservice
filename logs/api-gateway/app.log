@@ -506,3 +506,80 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2025-12-07 20:17:44 INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2025-12-07 20:17:45 INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
 2025-12-07 20:17:45 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/89e59a2cbb31:api-gateway:9090 - registration status: 204
+2025-12-07 21:12:55 INFO  c.c.a.ApiGatewayApplication - Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+2025-12-07 21:12:55 INFO  c.c.a.ApiGatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-07 21:13:25 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=40e9fc77-6db1-386e-a408-99186d056b5d
+2025-12-07 21:13:42 WARN  o.s.c.g.c.GatewayClassPathWarningAutoConfiguration - 
+
+**********************************************************
+
+The artifact spring-cloud-gateway-server is deprecated. It will be removed in the next major release. Please add spring-cloud-gateway-server-webflux dependency.
+
+**********************************************************
+
+
+2025-12-07 21:13:51 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-12-07 21:13:51 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-12-07 21:13:51 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-12-07 21:13:51 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-12-07 21:13:51 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-12-07 21:13:52 INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-12-07 21:13:59 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 17 endpoints beneath base path '/actuator'
+2025-12-07 21:14:03 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-12-07 21:14:03 WARN  o.s.c.g.s.w.s.StarterDeprecatedAutoConfiguration - 
+
+**********************************************************
+
+spring-cloud-starter-gateway is deprecated. It will be removed in the next major release. Please use spring-cloud-starter-gateway-server-webflux instead.
+
+**********************************************************
+
+
+2025-12-07 21:14:03 WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-07 21:14:04 INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-12-07 21:14:05 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-12-07 21:14:05 INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-12-07 21:14:13 INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-12-07 21:14:13 INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-12-07 21:14:13 INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-12-07 21:14:13 INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1765142053736 with initial instances count: 0
+2025-12-07 21:14:13 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application API-GATEWAY with eureka with status UP
+2025-12-07 21:14:13 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1765142053817, current=UP, previous=STARTING]
+2025-12-07 21:14:13 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/0ddfccd0f7c8:api-gateway:9090: registering service...
+2025-12-07 21:14:15 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/0ddfccd0f7c8:api-gateway:9090 - registration status: 204
+2025-12-07 21:14:15 INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 9090 (http)
+2025-12-07 21:14:15 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9090
+2025-12-07 21:14:15 INFO  c.c.a.ApiGatewayApplication - Started ApiGatewayApplication in 93.901 seconds (process running for 101.151)
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-12-07 21:14:43 INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-12-07 21:19:05 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-07 21:24:05 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-07 21:29:05 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-07 21:34:05 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-07 21:38:16 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application API-GATEWAY with eureka with status DOWN
+2025-12-07 21:38:16 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1765143496842, current=DOWN, previous=UP]
+2025-12-07 21:38:16 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/0ddfccd0f7c8:api-gateway:9090: registering service...
+2025-12-07 21:38:16 INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-07 21:38:16 INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-12-07 21:38:16 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/0ddfccd0f7c8:api-gateway:9090 - registration status: 204
