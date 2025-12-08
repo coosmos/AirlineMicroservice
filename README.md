@@ -29,14 +29,15 @@ This project handles the full workflow from **searching flights → booking → 
 
 <img width="1911" height="848" alt="image" src="https://github.com/user-attachments/assets/2922e08f-6a93-4576-9032-d2aca5c3c78c" />
 
-## started docker container on ec2 instance 
-
-<img width="1734" height="924" alt="image" src="https://github.com/user-attachments/assets/15c27e0f-cfba-455a-8887-39eafc033a50" />
 
 ## Started Eureka Service 
 
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/81949777-27ad-4e0b-b765-cd8f5a268287" />
 
+
+## started docker container on ec2 instance 
+
+<img width="1734" height="924" alt="image" src="https://github.com/user-attachments/assets/15c27e0f-cfba-455a-8887-39eafc033a50" />
 
 ##  Architecture Overview
 
@@ -68,6 +69,8 @@ This project contains **5 microservices + Kafka**:
  
  <img width="1810" height="446" alt="image" src="https://github.com/user-attachments/assets/0d0d7544-ef58-4fd3-b2b2-f2c198e3f4c7" />
 
+## Docker containers running successfully
+<img width="1911" height="957" alt="image" src="https://github.com/user-attachments/assets/907173f0-c62d-4284-b3d2-dac14bfd96e2" />
 
 
 ### 5️ API Gateway (9090)
