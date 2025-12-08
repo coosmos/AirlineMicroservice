@@ -25,6 +25,17 @@ This project handles the full workflow from **searching flights → booking → 
 ---
 [![](https://mermaid.ink/img/pako:eNqNlGuPojAUhv9K02SS3cQLFwWGD5uM6GwmuyIZnC-Lk02Fio1ATSlzWfG_LxRYUTFZPpS3Pc85vbyFA_RpgKEJNxF997eIcfDzeZWA4rm7A_OHJxtYi7mzsGf20q3GX1LMvLIZOjTlMUpeq_HviON39Ok9OE-NBoZkSHV4ljG8Q171AoauyXWgah8jEm65--Z7lQIuZm_Ex2WJhpxQuiNJWEK1bFOjZqIYkahkhGgT444ZpxPvCyIsIgn-Hay_ns9UBteVbAWr9gfa7JCLEfeEMkFa6H5J46DP6Z74ry2wLtiwddG-T5MNYTEOzkq786XjzYvFc4b2oleE_5liLWx7Zi2fFnbLENDvf8udhbsEw43Y1xDtSS3TvPGjk6_XIhJqfZlxZnCZerLrOnRyqdPfVvp0culru0AT7WLyR0zCBFgoivLLtXTyTraOSLrNT7b9B1YHO10XuEWTNIvx1RLa2edgczlvHk3-sg-KwxS3Kc0vDqrJFqCLkwDgciQXd-RGyUGBPuOQpByzvP4Kr_d-mzrN2cXAHgwZCaDJWYZ7MMaswIsuPJTZK8i3OMYraBYyQGy3gqvkWOTsUfKL0rhJYzQLt9DcoCgtepk4gSlBIUMnpNgtZhbNEg5NTR2LGtA8wA9o9hVlMBqNdUPRJVVTNFXSe_ATmvK9MVDGumrokibJknLswT9iVnkgy2NV00eje0M1NFlXehAHhFM2r_6G4qd4_AsBJ6A0?type=png)](https://mermaid.live/edit#pako:eNqNlGuPojAUhv9K02SS3cQLFwWGD5uM6GwmuyIZnC-Lk02Fio1ATSlzWfG_LxRYUTFZPpS3Pc85vbyFA_RpgKEJNxF997eIcfDzeZWA4rm7A_OHJxtYi7mzsGf20q3GX1LMvLIZOjTlMUpeq_HviON39Ok9OE-NBoZkSHV4ljG8Q171AoauyXWgah8jEm65--Z7lQIuZm_Ex2WJhpxQuiNJWEK1bFOjZqIYkahkhGgT444ZpxPvCyIsIgn-Hay_ns9UBteVbAWr9gfa7JCLEfeEMkFa6H5J46DP6Z74ry2wLtiwddG-T5MNYTEOzkq786XjzYvFc4b2oleE_5liLWx7Zi2fFnbLENDvf8udhbsEw43Y1xDtSS3TvPGjk6_XIhJqfZlxZnCZerLrOnRyqdPfVvp0culru0AT7WLyR0zCBFgoivLLtXTyTraOSLrNT7b9B1YHO10XuEWTNIvx1RLa2edgczlvHk3-sg-KwxS3Kc0vDqrJFqCLkwDgciQXd-RGyUGBPuOQpByzvP4Kr_d-mzrN2cXAHgwZCaDJWYZ7MMaswIsuPJTZK8i3OMYraBYyQGy3gqvkWOTsUfKL0rhJYzQLt9DcoCgtepk4gSlBIUMnpNgtZhbNEg5NTR2LGtA8wA9o9hVlMBqNdUPRJVVTNFXSe_ATmvK9MVDGumrokibJknLswT9iVnkgy2NV00eje0M1NFlXehAHhFM2r_6G4qd4_AsBJ6A0)
 
+## Deployed on AWS EC2
+
+<img width="1911" height="848" alt="image" src="https://github.com/user-attachments/assets/2922e08f-6a93-4576-9032-d2aca5c3c78c" />
+
+## started docker container on ec2 instance 
+
+<img width="1734" height="924" alt="image" src="https://github.com/user-attachments/assets/15c27e0f-cfba-455a-8887-39eafc033a50" />
+
+## Started Eureka Service 
+
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/81949777-27ad-4e0b-b765-cd8f5a268287" />
 
 
 ##  Architecture Overview
