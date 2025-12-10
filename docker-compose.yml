@@ -95,7 +95,20 @@ services:
       - ./logs/email-service:/app/logs
     depends_on:
       - kafka
+      - eureka-service 
+  
+  # -------------------- AUTH SERVICE --------------------
+  auth-service:
+    build: ./auth-service
+    container_name: auth-service
+    ports:
+      - "8543:8543"
+    volumes:
+      - ./logs/auth-service:/app/logs
+    depends_on:
+      - mysql
       - eureka-service
+
 
 volumes:
   mysql_data:
