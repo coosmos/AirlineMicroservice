@@ -21,29 +21,25 @@ public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false, unique = true)
     private String pnr;
-
     @Column(nullable = false)
     private String flightNumber;
-
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private List<Passenger> passengers = new ArrayList<>();
-
     @Column(nullable = false)
     private LocalDateTime bookingDate;
-
     @Column(nullable = false)
     private BookingStatus status=BookingStatus.CONFIRMED; // CONFIRMED, CANCELLED, PENDING
-
     @Column(nullable = false)
     private Double totalPrice;
-
     private String contactEmail;
-
     private String contactPhone;
+    private String airline;
+    private String source;
+    private String destination;
+    private LocalDateTime departureTime;
 
     public enum BookingStatus {
         CONFIRMED,

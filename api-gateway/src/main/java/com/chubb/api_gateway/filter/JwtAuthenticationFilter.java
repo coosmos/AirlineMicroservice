@@ -13,6 +13,7 @@ import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+import org.springframework.http.HttpMethod;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -25,13 +26,17 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
     @Autowired
     private JwtUtil jwtUtil;
 
-    // Only auth endpoints are public
     private static final List<String> PUBLIC_ENDPOINTS = List.of(
             "/api/auth/signup",
-            "/api/auth/signin"
+            "/api/auth/signin",
+            "/api/flight/search"
     );
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+
+        if (exchange.getRequest().getMethod().name().equals("OPTIONS")) {
+            return chain.filter(exchange);
+        }
 
         ServerHttpRequest request = exchange.getRequest();
         String path = request.getPath().toString();
@@ -65,8 +70,9 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
         return chain.filter(exchange.mutate().request(modifiedRequest).build());
     }
     private boolean isPublicEndpoint(String path) {
-        return PUBLIC_ENDPOINTS.stream().anyMatch(path::startsWith);
+        return PUBLIC_ENDPOINTS.stream().anyMatch(path::contains);
     }
+
     private Mono<Void> onError(ServerWebExchange exchange, String message, HttpStatus status) {
         ServerHttpResponse response = exchange.getResponse();
         response.setStatusCode(status);

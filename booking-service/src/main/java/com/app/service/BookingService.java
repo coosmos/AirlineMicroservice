@@ -38,22 +38,26 @@ public class BookingService {
     @Transactional
     public BookingResponseDTO createBooking(BookingRequestDTO requestDTO) {
 
-        FlightResponseDTO flight = flightClient.getFlightbyNumber(requestDTO.getFlightNumber());
+      //  FlightResponseDTO flight = flightClient.getFlightbyNumber(requestDTO.getFlightNumber());
 
-        int requestedSeats = requestDTO.getPassengers().size();
+      //  int requestedSeats = requestDTO.getPassengers().size();
 
-        if (flight.getAvailableSeats() < requestedSeats) {
-            throw new RuntimeException("Not enough seats available. Only "
-                    + flight.getAvailableSeats() + " seats left.");
-        }
+      //  if (flight.getAvailableSeats() < requestedSeats) {
+//            throw new RuntimeException("Not enough seats available. Only "
+//                    + flight.getAvailableSeats() + " seats left.");
+//        }
 
         String pnr = generatePNR();
-
-        Double totalPrice = flight.getPrice() * requestedSeats;
+        int totalseats=requestDTO.getPassengers().size();
+        Double totalPrice = (double)requestDTO.getTicketPrice()* totalseats;
 
         Booking booking = Booking.builder()
                 .pnr(pnr)
                 .flightNumber(requestDTO.getFlightNumber())
+                .airline(requestDTO.getAirline())
+                .source(requestDTO.getSource())
+                .destination(requestDTO.getDestination())
+                .departureTime(requestDTO.getDepartureTime())
                 .bookingDate(LocalDateTime.now())
                 .status(Booking.BookingStatus.CONFIRMED)
                 .totalPrice(totalPrice)
@@ -68,8 +72,6 @@ public class BookingService {
                         .lastName(passengerDTO.getLastName())
                         .age(passengerDTO.getAge())
                         .gender(passengerDTO.getGender())
-                        .email(passengerDTO.getEmail())
-                        .phoneNumber(passengerDTO.getPhoneNumber())
                         .booking(booking)
                         .build())
                 .collect(Collectors.toList());
@@ -79,14 +81,14 @@ public class BookingService {
         // 6. Save booking
         Booking savedBooking = bookingRepository.save(booking);
 
-        // 7. Publish SeatBookedEvent (for flight-service to reduce seats)
-        SeatBookedEvent seatEvent = new SeatBookedEvent(
-                requestDTO.getFlightNumber(),
-                requestedSeats,
-                pnr
-        );
-        seatBookedKafkaTemplate.send("seat-booked-topic", seatEvent);
-        System.out.println(" SeatBookedEvent published: " + seatEvent);
+//        // 7. Publish SeatBookedEvent (for flight-service to reduce seats)
+//        SeatBookedEvent seatEvent = new SeatBookedEvent(
+//                requestDTO.getFlightNumber(),
+//                requestedSeats,
+//                pnr
+//        );
+//        seatBookedKafkaTemplate.send("seat-booked-topic", seatEvent);
+//        System.out.println(" SeatBookedEvent published: " + seatEvent);
 
         // 8. Publish BookingConfirmedEvent (for email-service to send email)
         List<PassengerInfo> passengerInfos = requestDTO.getPassengers().stream()
@@ -100,11 +102,11 @@ public class BookingService {
 
         BookingConfirmedEvent confirmedEvent = new BookingConfirmedEvent(
                 pnr,
-                flight.getFlightNumber(),
-                flight.getAirline(),
-                flight.getSource(),
-                flight.getDestination(),
-                flight.getDepartureTime(),
+                requestDTO.getFlightNumber(),
+                requestDTO.getAirline(),
+                requestDTO.getSource(),
+                requestDTO.getDestination(),
+                requestDTO.getDepartureTime(),
                 passengerInfos,
                 totalPrice,
                 requestDTO.getContactEmail(),
@@ -173,9 +175,7 @@ public class BookingService {
                         passenger.getFirstName(),
                         passenger.getLastName(),
                         passenger.getAge(),
-                        passenger.getGender(),
-                        passenger.getEmail(),
-                        passenger.getPhoneNumber()
+                        passenger.getGender()
                 ))
                 .collect(Collectors.toList());
 

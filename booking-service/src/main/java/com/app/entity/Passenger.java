@@ -30,10 +30,6 @@ public class Passenger {
     @Column(nullable = false)
     private String gender;
 
-    private String email;
-
-    private String phoneNumber;
-
     @ManyToOne
     @JoinColumn(name = "booking_id")
     private Booking booking;

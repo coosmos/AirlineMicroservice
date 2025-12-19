@@ -30,6 +30,8 @@ public class JwtUtil {
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
+
+
     public Claims getAllClaimsFromToken(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(getSigningKey())

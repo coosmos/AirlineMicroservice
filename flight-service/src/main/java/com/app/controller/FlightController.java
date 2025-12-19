@@ -1,6 +1,9 @@
 package com.app.controller;
 
 
+import com.app.amadeus.AmadeusAuthService;
+import com.app.amadeus.AmadeusFlightResponseDTO;
+import com.app.amadeus.AmadeusFlightService;
 import com.app.dto.FlightRequestDTO;
 import com.app.dto.FlightResponseDTO;
 import com.app.dto.FlightSearchDTO;
@@ -21,6 +24,11 @@ public class FlightController {
 
     @Autowired
     private  FlightService flightService;
+
+    @Autowired
+    private AmadeusAuthService authService;
+    @Autowired
+    private AmadeusFlightService amadeusflightService;
 
     @PostMapping
     public ResponseEntity<?> addFlight( @Valid @RequestBody FlightRequestDTO request) {
@@ -49,6 +57,16 @@ public class FlightController {
 
         FlightResponseDTO flight = flightService.getFlightByNumber(flightNumber);
         return ResponseEntity.ok(flight);
+    }
+
+
+    @GetMapping("/offers")
+    public List<AmadeusFlightResponseDTO> offers(
+            @RequestParam String origin,
+            @RequestParam String destination,
+            @RequestParam String date
+    ) throws Exception {
+        return amadeusflightService.searchFlightOffers(origin, destination, date);
     }
 
 

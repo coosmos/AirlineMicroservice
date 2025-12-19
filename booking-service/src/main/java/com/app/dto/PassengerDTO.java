@@ -24,9 +24,4 @@ public class PassengerDTO {
     @NotBlank(message = "Gender is required")
     private String gender;
 
-    @Email(message = "Invalid email format")
-    private String email;
-
-    @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be 10 digits")
-    private String phoneNumber;
 }
