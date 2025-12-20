@@ -1,1 +1,19 @@
-2025-12-19 00:00:02 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-22 05:28:35 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:33:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:38:11 INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node 1 disconnected.
+2025-12-20 05:38:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:43:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:48:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:50:52 INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (org.apache.hc.core5.http.NoHttpResponseException) caught when processing request to {}->http://eureka-service:8761
+2025-12-20 05:53:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:58:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:03:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:08:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:13:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:18:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:23:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:28:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:33:49 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:38:17 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application BOOKING-SERVICE with eureka with status DOWN
+2025-12-20 06:38:17 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1766212697205, current=DOWN, previous=UP]
+2025-12-20 06:38:17 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BOOKING-SERVICE/booking-service:e311fa35c497a9c33d5caa061fa97616: registering service...

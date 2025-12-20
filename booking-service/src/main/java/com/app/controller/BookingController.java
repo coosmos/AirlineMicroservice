@@ -1,5 +1,6 @@
 package com.app.controller;
 
+import com.app.dto.BookingHistoryRequestDTO;
 import com.app.dto.BookingRequestDTO;
 import com.app.dto.BookingResponseDTO;
 import com.app.service.BookingService;
@@ -41,11 +42,17 @@ public class BookingController {
         return ResponseEntity.ok(booking);
     }
 
-    // Optional: Cancel booking
+    //  Cancel booking
     @PutMapping("/{pnr}/cancel")
     public ResponseEntity<BookingResponseDTO> cancelBooking(@PathVariable String pnr) {
         BookingResponseDTO response = bookingService.cancelBooking(pnr);
         return ResponseEntity.ok(response);
+    }
+
+    // getting booking history through email
+    @PostMapping("/bookingHistory")
+    public ResponseEntity<List<BookingResponseDTO>> getBookingHistory(@RequestBody @Valid BookingHistoryRequestDTO request){
+        return ResponseEntity.ok(bookingService.getBookingHistory(request.getEmail()));
     }
 
     @GetMapping("/healthCheck")

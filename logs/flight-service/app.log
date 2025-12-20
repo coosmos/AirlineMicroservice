@@ -1,0 +1,46 @@
+2025-12-22 05:23:47 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-22 05:23:51 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-22 05:23:51 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-22 05:23:55 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-22 05:24:01 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-22 05:24:02 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-22 05:24:02 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-22 05:24:44 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-22 05:29:44 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:34:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:39:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:42:34 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Node 2147483646 disconnected.
+2025-12-20 05:42:34 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-12-20 05:42:34 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 05:44:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:49:47 INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (org.apache.hc.core5.http.NoHttpResponseException) caught when processing request to {}->http://eureka-service:8761
+2025-12-20 05:49:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:51:34 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Node 2147483646 disconnected.
+2025-12-20 05:51:34 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-12-20 05:51:34 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 05:51:34 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-12-20 05:51:34 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 05:51:34 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 05:54:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 05:59:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:00:35 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Node 2147483646 disconnected.
+2025-12-20 06:00:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-12-20 06:00:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 06:00:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-12-20 06:00:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 06:00:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 06:04:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:09:35 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Node 2147483646 disconnected.
+2025-12-20 06:09:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-12-20 06:09:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 06:09:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-12-20 06:09:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 06:09:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-20 06:09:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:14:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:18:36 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Node 2147483646 disconnected.
+2025-12-20 06:19:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:24:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:29:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:34:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-20 06:39:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

@@ -1,5 +1,6 @@
 package com.app.service;
 
+import com.app.exception.BookingCancellationNotAllowedException;
 import com.app.feign.FlightClient;
 import com.app.dto.*;
 import com.app.entity.Booking;
@@ -14,6 +15,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -133,17 +135,20 @@ public class BookingService {
         Booking booking = bookingRepository.findByPnr(pnr)
                 .orElseThrow(() -> new BookingNotFoundException(
                         "Booking not found with PNR: " + pnr));
-
-        if ("CANCELLED".equals(booking.getStatus())) {
+        if (booking.getStatus() == Booking.BookingStatus.CANCELLED) {
             throw new RuntimeException("Booking already cancelled");
         }
-
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime departureTime = booking.getDepartureTime();
+        long hoursLeft = Duration.between(now, departureTime).toHours();
+        if (hoursLeft < 24) {
+            throw new BookingCancellationNotAllowedException(
+                    "Cancellation not allowed within 24 hours of departure"
+            );
+        }
         booking.setStatus(Booking.BookingStatus.CANCELLED);
         Booking updatedBooking = bookingRepository.save(booking);
-
-        // Publish Kafka event to release seats back  --TODO
-        // (flight-service will listen and increase seat count)
-
+        // TODO: publish Kafka event to flight-service (release seats)
         return mapToResponseDTO(updatedBooking);
     }
 
@@ -154,6 +159,14 @@ public class BookingService {
                         "Booking not found with PNR: " + pnr));
 
         return mapToResponseDTO(booking);
+    }
+
+    //Get booking history through contactEmail
+    public List<BookingResponseDTO> getBookingHistory(String email){
+        return bookingRepository.findByContactEmail(email)
+                .stream()
+                .map(this::mapToResponseDTO)
+                .toList();
     }
 
     private String generatePNR() {
