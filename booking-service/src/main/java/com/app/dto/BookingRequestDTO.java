@@ -29,7 +29,9 @@ public class BookingRequestDTO {
     @NotBlank(message = "Contact phone is required")
     @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be 10 digits")
     private String contactPhone;
-
+    @Email
+    @NotBlank
+    private String bookingOwnerEmail;
     private String airline;
     private String source;
     private String destination;

@@ -65,6 +65,7 @@ public class BookingService {
                 .totalPrice(totalPrice)
                 .contactEmail(requestDTO.getContactEmail())
                 .contactPhone(requestDTO.getContactPhone())
+                .bookingOwnerEmail(requestDTO.getBookingOwnerEmail())
                 .passengers(new ArrayList<>())
                 .build();
 
@@ -113,6 +114,7 @@ public class BookingService {
                 totalPrice,
                 requestDTO.getContactEmail(),
                 requestDTO.getContactPhone()
+
         );
 
         bookingConfirmedKafkaTemplate.send("booking-confirmed", confirmedEvent);
@@ -162,12 +164,18 @@ public class BookingService {
     }
 
     //Get booking history through contactEmail
-    public List<BookingResponseDTO> getBookingHistory(String email){
-        return bookingRepository.findByContactEmail(email)
-                .stream()
+    public List<BookingResponseDTO> getBookingHistory(String email) {
+        List<Booking> bookings = bookingRepository.findByBookingOwnerEmail(email);
+        if (bookings == null || bookings.isEmpty()) {
+            throw new BookingNotFoundException(
+                    "No bookings found for email: " + email
+            );
+        }
+        return bookings.stream()
                 .map(this::mapToResponseDTO)
                 .toList();
     }
+
 
     private String generatePNR() {
         String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -202,6 +210,9 @@ public class BookingService {
                 .totalPrice(booking.getTotalPrice())
                 .contactEmail(booking.getContactEmail())
                 .contactPhone(booking.getContactPhone())
+                .bookingOwnerEmail(booking.getBookingOwnerEmail())
+                .source(booking.getSource())
+                .destination(booking.getDestination())
                 .build();
     }
 }

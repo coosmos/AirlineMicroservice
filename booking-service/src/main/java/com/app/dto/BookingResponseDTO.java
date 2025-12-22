@@ -24,4 +24,8 @@ public class BookingResponseDTO {
     private Double totalPrice;
     private String contactEmail;
     private String contactPhone;
+    private String bookingOwnerEmail;
+    private String source;
+    private String destination;
+
 }

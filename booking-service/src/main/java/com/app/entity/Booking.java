@@ -1,6 +1,7 @@
 package com.app.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -40,6 +41,7 @@ public class Booking {
     private String source;
     private String destination;
     private LocalDateTime departureTime;
+    private String bookingOwnerEmail;
 
     public enum BookingStatus {
         CONFIRMED,

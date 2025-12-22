@@ -61,49 +61,23 @@ public class AmadeusFlightService {
                 .toList();
     }
 
-
-
     private AmadeusFlightResponseDTO mapToFlightResponse(JsonNode offer) {
-
         AmadeusFlightResponseDTO dto = new AmadeusFlightResponseDTO();
-
         JsonNode itinerary = offer.path("itineraries").get(0);
         JsonNode segment = itinerary.path("segments").get(0);
-
         String carrierCode = segment.path("carrierCode").asText("");
         String flightNum = segment.path("number").asText("");
-
-        dto.setFlightNumber(
-                carrierCode.isEmpty() ? "" : carrierCode + "-" + flightNum
-        );
-
-        // airline name not available → empty string is OK
+        dto.setFlightNumber(carrierCode.isEmpty() ? "" : carrierCode + "-" + flightNum);
+        // airline name not available
         dto.setAirline("AIRLINE");
-
-        dto.setSource(
-                segment.path("departure").path("iataCode").asText("")
-        );
-
-        dto.setDestination(
-                segment.path("arrival").path("iataCode").asText("")
-        );
-
-        dto.setDepartureTime(
-                segment.path("departure").path("at").asText("")
-        );
-
-        dto.setArrivalTime(
-                segment.path("arrival").path("at").asText("")
-        );
-
-        dto.setPrice(
-                offer.path("price").path("total").asDouble(0.0)
-        );
-
+        dto.setSource(segment.path("departure").path("iataCode").asText(""));
+        dto.setDestination(segment.path("arrival").path("iataCode").asText(""));
+        dto.setDepartureTime(segment.path("departure").path("at").asText(""));
+        dto.setArrivalTime(segment.path("arrival").path("at").asText(""));
+        dto.setPrice(offer.path("price").path("total").asDouble(0.0));
         int seats = offer.path("numberOfBookableSeats").asInt(0);
         dto.setAvailableSeats(seats);
         dto.setTotalSeats(seats);
-
         return dto;
     }
 

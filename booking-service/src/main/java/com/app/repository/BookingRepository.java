@@ -10,5 +10,6 @@ public interface BookingRepository extends JpaRepository<Booking, Long>{
 
     Optional< Booking> findByPnr(String pnr);
     List<Booking> findByContactEmail(String contactEmail);
+    List<Booking> findByBookingOwnerEmail(String bookingOwnerEmail);
 
 }
