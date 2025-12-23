@@ -112,7 +112,7 @@ public class AuthController {
     //adding endpoint for fetching user name , email , and roles
     // adding endpoint to update username
     // adding endpoint to update password
-    @PutMapping("/user-profile")
+    @PutMapping("/user-change-username")
     public ResponseEntity<?> updateProfile(
             @Valid @RequestBody UpdateProfileRequest request) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

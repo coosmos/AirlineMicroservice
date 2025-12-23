@@ -1,0 +1,149 @@
+2025-12-23 00:32:45 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-23 00:33:33 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 00:33:33 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-23 00:33:34 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Disconnecting from node 1 due to request timeout.
+2025-12-23 00:33:34 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Cancelled in-flight METADATA request with correlation id 271185 due to node 1 being disconnected (elapsed time since creation: 712ms, elapsed time since send: 712ms, request timeout: 30000ms)
+2025-12-23 00:33:34 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Cancelled in-flight FIND_COORDINATOR request with correlation id 271186 due to node 1 being disconnected (elapsed time since creation: 53ms, elapsed time since send: 13ms, request timeout: 30000ms)
+2025-12-23 00:33:34 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Cancelled in-flight FIND_COORDINATOR request with correlation id 271187 due to node 1 being disconnected (elapsed time since creation: 4ms, elapsed time since send: 49169ms, request timeout: 30000ms)
+2025-12-23 00:33:36 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 02:34:03 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Disconnecting from node 1 due to request timeout.
+2025-12-23 02:34:03 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Cancelled in-flight FETCH request with correlation id 271194 due to node 1 being disconnected (elapsed time since creation: 7226939ms, elapsed time since send: 7226939ms, request timeout: 30000ms)
+2025-12-23 02:34:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-23 02:34:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 02:34:03 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-23 02:34:03 INFO  o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Error sending fetch request (sessionId=89877830, epoch=39953) to node 1:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-12-23 02:34:04 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 02:34:04 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 04:18:56 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-23 04:18:56 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 04:18:56 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-23 04:18:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 04:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-23 04:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 04:26:50 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-23 04:26:51 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 04:27:32 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 04:32:33 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 04:37:33 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 04:42:33 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 04:47:33 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 06:01:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-23 06:01:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 06:01:57 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-23 06:02:00 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 06:24:07 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Disconnecting from node 1 due to request timeout.
+2025-12-23 06:24:07 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Cancelled in-flight FETCH request with correlation id 274897 due to node 1 being disconnected (elapsed time since creation: 1326796ms, elapsed time since send: 1326796ms, request timeout: 30000ms)
+2025-12-23 06:24:08 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Cancelled in-flight METADATA request with correlation id 274900 due to node 1 being disconnected (elapsed time since creation: 0ms, elapsed time since send: 0ms, request timeout: 30000ms)
+2025-12-23 06:24:08 INFO  o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Error sending fetch request (sessionId=981520494, epoch=3148) to node 1:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-12-23 08:27:50 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Disconnecting from node 1 due to request timeout.
+2025-12-23 08:27:52 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Cancelled in-flight FETCH request with correlation id 274915 due to node 1 being disconnected (elapsed time since creation: 7416558ms, elapsed time since send: 7416558ms, request timeout: 30000ms)
+2025-12-23 08:27:52 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-23 08:27:52 INFO  o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Error sending fetch request (sessionId=246523237, epoch=10) to node 1:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-12-23 08:27:52 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 08:27:53 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-23 08:27:53 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 08:28:40 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-12-23 08:28:40 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Requesting disconnect from last known coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 08:28:40 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Client requested disconnect from node 2147483646
+2025-12-23 08:28:40 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-flight-service-group-1, groupId=flight-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-12-23 08:28:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 08:33:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 08:38:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 08:43:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 08:48:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 08:53:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 08:58:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:03:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:08:52 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:13:53 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:18:53 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:23:53 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:28:53 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:33:53 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:38:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:43:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:48:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:53:54 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 09:58:55 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:03:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:08:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:13:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:18:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:23:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:28:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:33:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:38:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:43:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:48:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:53:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 10:58:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:03:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:08:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:13:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:18:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:23:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:28:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:33:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:38:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:43:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:48:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:53:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 11:58:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:03:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:08:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:13:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:18:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:23:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:28:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:33:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:38:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:43:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:48:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:53:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 12:58:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:03:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:08:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:13:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:18:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:23:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:28:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:33:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:38:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:43:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:48:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:53:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 13:58:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:03:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:08:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:13:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:18:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:23:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:28:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:33:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:38:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:43:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:48:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:53:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 14:58:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:03:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:08:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:13:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:18:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:23:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:28:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:33:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:38:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:43:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:48:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:53:57 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 15:58:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 16:03:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 16:08:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 16:13:56 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-12-23 16:18:32 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2025-12-23 16:18:32 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1766506712128, current=DOWN, previous=UP]
+2025-12-23 16:18:32 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLIGHT-SERVICE/flight-service:0c170ca9572a3e7f74bd6a7578b6d93f: registering service...
+2025-12-23 16:18:32 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLIGHT-SERVICE/flight-service:0c170ca9572a3e7f74bd6a7578b6d93f - registration status: 204
