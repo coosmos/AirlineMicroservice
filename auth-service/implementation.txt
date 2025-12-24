@@ -1,0 +1,13 @@
+1. task to check if the user loggin in has  a valid pssword or the password expired
+
+overview -> added a password_last_changed column to entity.
+-> updated the sql table
+-> caluculating the password expiration at login in throwing the error to frontend
+
+# story :- password should be validated at login only , no new apis according to me is needed
+# story:- if the password expired -> in the frontend let the user to create a new password and login so basically
+#          signing up with same user and email but different password
+
+
+[ user  ]-----------> [signup]----> store the time stamp in column passwordlastchanged
+[ user -login ]-----> verify the localDatetime in respect to user's timezone and calculate the time difference
