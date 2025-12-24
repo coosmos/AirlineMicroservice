@@ -52,6 +52,14 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
         if (!jwtUtil.validateToken(token)) {
             return onError(exchange, "Invalid or expired token", HttpStatus.UNAUTHORIZED);
         }
+        boolean pwdExpired = jwtUtil.isPasswordExpired(token);
+
+        if (pwdExpired && !isPasswordChangeAllowed(request)) {
+            return onError(exchange,
+                    "Password expired. Change required.",
+                    HttpStatus.FORBIDDEN);
+        }
+
         String username = jwtUtil.getUsernameFromToken(token);
         List<String> roles = jwtUtil.getRolesFromToken(token);
         if (isAdminOnlyEndpoint(request) && !roles.contains("ROLE_ADMIN")) {
@@ -93,5 +101,12 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
         return ADMIN_ENDPOINTS.stream().anyMatch(p -> p.test(request));
     }
 
+    private boolean isPasswordChangeAllowed(ServerHttpRequest request) {
+        String path = request.getPath().toString();
+
+        return path.startsWith("/api/auth/user-change-password")
+                || path.startsWith("/api/auth/signout")
+                || path.startsWith("/api/auth/signin");
+    }
 
 }

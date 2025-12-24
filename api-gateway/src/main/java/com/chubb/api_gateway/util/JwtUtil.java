@@ -70,4 +70,10 @@ public class JwtUtil {
         }
         return false;
     }
+    //adding is password expired method
+    public boolean isPasswordExpired(String token) {
+        Claims claims = getAllClaimsFromToken(token);
+        Object val=claims.get("pwd_expired");
+        return val instanceof Boolean && (Boolean) val;
+    }
 }

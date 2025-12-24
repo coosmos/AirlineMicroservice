@@ -14,6 +14,7 @@ import com.airline.auth.repository.UserRepository;
 import com.airline.auth.security.jwt.JwtUtils;
 import com.airline.auth.security.service.UserDetailsImpl;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,6 +25,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -49,13 +51,26 @@ public class AuthController {
     @Autowired
     JwtUtils jwtUtils;
 
+    @Value("${security.password.expiry-days}")
+    private long passwordExpiryDays;
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        String jwt = jwtUtils.generateJwtToken(authentication);
+
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        User user=userRepository.findByUsername((userDetails.getUsername()))
+                .orElseThrow(()->new RuntimeException("Username not found"));
+
+        //password expiry logic , chronounit helps with time caluclation without getting messy
+        long lastpasswordChange= ChronoUnit.DAYS.between(
+                user.getPasswordLastChanged(),LocalDateTime.now()
+        );
+        boolean passwordExpired=lastpasswordChange >=passwordExpiryDays;
+        String jwt = jwtUtils.generateJwtToken(authentication,passwordExpired);
+        System.out.println("password expired for " + user.getUsername()+ " "+passwordExpired);
+
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
@@ -134,7 +149,13 @@ public class AuthController {
                 null,
                 currentUser.getAuthorities()
         );
-        String newToken = jwtUtils.generateJwtToken(newAuth);
+        boolean passwordExpired = ChronoUnit.DAYS.between(
+                user.getPasswordLastChanged(),
+                LocalDateTime.now()
+        ) >= passwordExpiryDays;
+
+        String newToken = jwtUtils.generateJwtToken(newAuth, passwordExpired);
+cool
         return ResponseEntity.ok(new JwtResponse(
                 newToken,
                 user.getId(),
@@ -164,5 +185,5 @@ public class AuthController {
         );
     }
 
-
+    // authenticate user
 }

@@ -11,3 +11,14 @@ overview -> added a password_last_changed column to entity.
 
 [ user  ]-----------> [signup]----> store the time stamp in column passwordlastchanged
 [ user -login ]-----> verify the localDatetime in respect to user's timezone and calculate the time difference
+
+
+
+next goal is to update jwt like this
+{
+  "sub": "ashu",
+  "roles": ["ROLE_USER"],
+  "pwd_expired": true,
+  "iat": ...,
+  "exp": ...
+}

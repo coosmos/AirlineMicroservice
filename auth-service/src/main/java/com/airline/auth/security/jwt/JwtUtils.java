@@ -32,7 +32,7 @@ public class JwtUtils {
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
-    public String generateJwtToken(Authentication authentication) {
+    public String generateJwtToken(Authentication authentication, boolean passwordExpired) {
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
 
         List<String> roles = userPrincipal.getAuthorities().stream()
@@ -42,6 +42,7 @@ public class JwtUtils {
         return Jwts.builder()
                 .setSubject(userPrincipal.getUsername())
                 .claim("roles", roles)
+                .claim("pwd_expired",passwordExpired)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
