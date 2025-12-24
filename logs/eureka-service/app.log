@@ -1,0 +1,513 @@
+2025-12-24 03:05:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-12-24 03:05:30 INFO  c.n.e.r.AbstractInstanceRegistry - Evicting 1 items (expired=3, evictionLimit=1)
+2025-12-24 03:05:30 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: expired lease for AUTH-SERVICE/Ashutosh:auth-service:8543
+2025-12-24 03:05:30 INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance AUTH-SERVICE/Ashutosh:auth-service:8543 (replication=false)
+2025-12-24 03:05:46 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: AUTH-SERVICE - Ashutosh:auth-service:8543
+2025-12-24 03:05:46 WARN  c.n.e.resources.InstanceResource - Not Found (Renew): AUTH-SERVICE - Ashutosh:auth-service:8543
+2025-12-24 03:05:46 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance AUTH-SERVICE/Ashutosh:auth-service:8543 with status UP (replication=false)
+2025-12-24 03:05:47 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance AUTH-SERVICE/Ashutosh:auth-service:8543 with status UP (replication=true)
+2025-12-24 03:06:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 8ms
+2025-12-24 03:07:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2025-12-24 03:08:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 03:09:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2025-12-24 03:10:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:11:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:12:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:13:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:14:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:15:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:16:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:17:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:18:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:19:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 8
+2025-12-24 03:19:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:20:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:21:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:22:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:23:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:24:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 03:25:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:26:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:27:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:28:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:29:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2025-12-24 03:30:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 03:31:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:32:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:33:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:33:53 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/booking-service:451374cc45b20d0076d2ffd8e79dde05 with status UP (replication=false)
+2025-12-24 03:33:53 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/booking-service:451374cc45b20d0076d2ffd8e79dde05 with status UP (replication=true)
+2025-12-24 03:34:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 03:34:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:35:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:36:12 ERROR c.n.e.c.ReplicationTaskProcessor - It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+jakarta.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:531)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:662)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:661)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:439)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:345)
+	at com.netflix.eureka.transport.Jersey3ReplicationClient.submitBatchUpdates(Jersey3ReplicationClient.java:116)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:483)
+	... 16 common frames omitted
+2025-12-24 03:36:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2025-12-24 03:37:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-12-24 03:38:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:39:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:40:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:41:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:42:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:43:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:44:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2025-12-24 03:45:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:45:43 ERROR c.n.e.c.ReplicationTaskProcessor - It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+jakarta.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:531)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:662)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:661)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:439)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:345)
+	at com.netflix.eureka.transport.Jersey3ReplicationClient.submitBatchUpdates(Jersey3ReplicationClient.java:116)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:483)
+	... 16 common frames omitted
+2025-12-24 03:46:29 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 168ms
+2025-12-24 03:47:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-12-24 03:48:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:49:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 03:49:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:50:08 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/booking-service:451374cc45b20d0076d2ffd8e79dde05 with status DOWN (replication=false)
+2025-12-24 03:50:09 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/booking-service:451374cc45b20d0076d2ffd8e79dde05 with status DOWN (replication=true)
+2025-12-24 03:50:16 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance AUTH-SERVICE/Ashutosh:auth-service:8543 with status DOWN (replication=false)
+2025-12-24 03:50:16 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance AUTH-SERVICE/Ashutosh:auth-service:8543 with status DOWN (replication=true)
+2025-12-24 03:50:19 INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance AUTH-SERVICE/Ashutosh:auth-service:8543 (replication=false)
+2025-12-24 03:50:20 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: cancel failed because Lease is not registered for: AUTH-SERVICE/Ashutosh:auth-service:8543
+2025-12-24 03:50:20 INFO  c.n.e.resources.InstanceResource - Not Found (Cancel): AUTH-SERVICE - Ashutosh:auth-service:8543
+2025-12-24 03:50:20 WARN  c.n.eureka.cluster.ReplicationTask - The replication of task AUTH-SERVICE/Ashutosh:auth-service:8543:Cancel@localhost failed with response code 404
+2025-12-24 03:50:20 WARN  c.n.eureka.cluster.PeerEurekaNode - AUTH-SERVICE/Ashutosh:auth-service:8543:Cancel@localhost: missing entry.
+2025-12-24 03:50:22 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888 with status DOWN (replication=false)
+2025-12-24 03:50:23 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888 with status DOWN (replication=true)
+2025-12-24 03:50:26 INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888 (replication=false)
+2025-12-24 03:50:26 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: lease doesn't exist, registering resource: CONFIG-SERVER-AIRLINE - Ashutosh:config-server-airline:8888
+2025-12-24 03:50:26 WARN  c.n.e.resources.InstanceResource - Not Found (Renew): CONFIG-SERVER-AIRLINE - Ashutosh:config-server-airline:8888
+2025-12-24 03:50:26 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: cancel failed because Lease is not registered for: CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888
+2025-12-24 03:50:26 INFO  c.n.e.resources.InstanceResource - Not Found (Cancel): CONFIG-SERVER-AIRLINE - Ashutosh:config-server-airline:8888
+2025-12-24 03:50:26 WARN  c.n.eureka.cluster.ReplicationTask - The replication of task CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888:Heartbeat@localhost failed with response code 404
+2025-12-24 03:50:26 WARN  c.n.eureka.cluster.PeerEurekaNode - CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888:Heartbeat@localhost: missing entry.
+2025-12-24 03:50:26 WARN  c.n.eureka.cluster.PeerEurekaNode - CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888:Heartbeat@localhost: cannot find instance id Ashutosh:config-server-airline:8888 and hence replicating the instance with status DOWN
+2025-12-24 03:50:26 WARN  c.n.eureka.cluster.ReplicationTask - The replication of task CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888:Cancel@localhost failed with response code 404
+2025-12-24 03:50:26 WARN  c.n.eureka.cluster.PeerEurekaNode - CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888:Cancel@localhost: missing entry.
+2025-12-24 03:50:27 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888 with status DOWN (replication=true)
+2025-12-24 03:50:29 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance API-GATEWAY/Ashutosh:api-gateway:9090 with status DOWN (replication=false)
+2025-12-24 03:50:29 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance API-GATEWAY/Ashutosh:api-gateway:9090 with status DOWN (replication=true)
+2025-12-24 03:50:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 03:50:34 INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance API-GATEWAY/Ashutosh:api-gateway:9090 (replication=false)
+2025-12-24 03:50:34 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: cancel failed because Lease is not registered for: API-GATEWAY/Ashutosh:api-gateway:9090
+2025-12-24 03:50:34 INFO  c.n.e.resources.InstanceResource - Not Found (Cancel): API-GATEWAY - Ashutosh:api-gateway:9090
+2025-12-24 03:50:34 WARN  c.n.eureka.cluster.ReplicationTask - The replication of task API-GATEWAY/Ashutosh:api-gateway:9090:Cancel@localhost failed with response code 404
+2025-12-24 03:50:34 WARN  c.n.eureka.cluster.PeerEurekaNode - API-GATEWAY/Ashutosh:api-gateway:9090:Cancel@localhost: missing entry.
+2025-12-24 03:51:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:52:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 03:53:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 25ms
+2025-12-24 03:53:57 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance API-GATEWAY/fd15f6449781:api-gateway:9090 with status UP (replication=false)
+2025-12-24 03:53:58 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance API-GATEWAY/fd15f6449781:api-gateway:9090 with status UP (replication=true)
+2025-12-24 03:54:28 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance AUTH-SERVICE/2f8b0468aab5:auth-service:8543 with status UP (replication=false)
+2025-12-24 03:54:28 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance AUTH-SERVICE/2f8b0468aab5:auth-service:8543 with status UP (replication=true)
+2025-12-24 03:54:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 31ms
+2025-12-24 03:54:38 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance FLIGHT-SERVICE/flight-service:f0b0c41aacc6dc32c4e2370d65aac47b with status UP (replication=false)
+2025-12-24 03:54:39 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance FLIGHT-SERVICE/flight-service:f0b0c41aacc6dc32c4e2370d65aac47b with status UP (replication=true)
+2025-12-24 03:54:39 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/booking-service:72f70aa88820ed8e1408760c8602efd3 with status UP (replication=false)
+2025-12-24 03:54:39 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance BOOKING-SERVICE/booking-service:72f70aa88820ed8e1408760c8602efd3 with status UP (replication=true)
+2025-12-24 03:55:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 8ms
+2025-12-24 03:55:30 INFO  c.n.e.r.AbstractInstanceRegistry - Evicting 2 items (expired=2, evictionLimit=2)
+2025-12-24 03:55:30 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: expired lease for CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888
+2025-12-24 03:55:30 INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance CONFIG-SERVER-AIRLINE/Ashutosh:config-server-airline:8888 (replication=false)
+2025-12-24 03:55:30 WARN  c.n.e.r.AbstractInstanceRegistry - DS: Registry: expired lease for BOOKING-SERVICE/booking-service:451374cc45b20d0076d2ffd8e79dde05
+2025-12-24 03:55:30 INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance BOOKING-SERVICE/booking-service:451374cc45b20d0076d2ffd8e79dde05 (replication=false)
+2025-12-24 03:56:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 14ms
+2025-12-24 03:57:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 9ms
+2025-12-24 03:58:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2025-12-24 03:59:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2025-12-24 04:00:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:01:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:02:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:03:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:04:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 04:04:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:05:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:06:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2025-12-24 04:07:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:08:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:09:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:10:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:11:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:12:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:13:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:14:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:15:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:15:41 ERROR c.n.e.c.ReplicationTaskProcessor - It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+jakarta.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:531)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:662)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:661)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:439)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:345)
+	at com.netflix.eureka.transport.Jersey3ReplicationClient.submitBatchUpdates(Jersey3ReplicationClient.java:116)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:483)
+	... 16 common frames omitted
+2025-12-24 04:16:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 8ms
+2025-12-24 04:17:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:18:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:19:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 04:19:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:20:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:21:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:22:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2025-12-24 04:23:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-12-24 04:24:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:25:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:25:44 ERROR c.n.e.c.ReplicationTaskProcessor - It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+jakarta.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:531)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:662)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:661)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:439)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:345)
+	at com.netflix.eureka.transport.Jersey3ReplicationClient.submitBatchUpdates(Jersey3ReplicationClient.java:116)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:483)
+	... 16 common frames omitted
+2025-12-24 04:26:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 13ms
+2025-12-24 04:27:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2025-12-24 04:28:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:29:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:30:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:31:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:32:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2025-12-24 04:33:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:34:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 04:34:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2025-12-24 04:35:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:36:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:37:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2025-12-24 04:38:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:39:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:40:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:41:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:42:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:43:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:44:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:45:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:46:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 11ms
+2025-12-24 04:47:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:48:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 04:49:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 04:49:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:50:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:51:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:52:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2025-12-24 04:53:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:54:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 04:55:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:56:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2025-12-24 04:57:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2025-12-24 04:58:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 04:59:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:00:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:01:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:02:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:03:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:04:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 05:04:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:05:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:06:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:07:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:08:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:09:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:10:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:11:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:12:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:13:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:14:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:15:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:16:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:17:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:18:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:19:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 05:19:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:20:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2025-12-24 05:21:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:22:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:23:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:24:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:25:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:26:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 8ms
+2025-12-24 05:27:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 05:28:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:29:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:30:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2025-12-24 05:31:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:32:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 05:33:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:34:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 05:34:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:35:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 05:36:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 05:37:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2025-12-24 05:38:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:39:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2025-12-24 05:40:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:41:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:42:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:43:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:44:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:45:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 05:46:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 74ms
+2025-12-24 05:47:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 20ms
+2025-12-24 05:48:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2025-12-24 05:49:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 05:49:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 05:50:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:51:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:52:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:53:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:54:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 05:55:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 05:55:47 ERROR c.n.e.c.ReplicationTaskProcessor - It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+jakarta.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:531)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:662)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:661)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:439)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:345)
+	at com.netflix.eureka.transport.Jersey3ReplicationClient.submitBatchUpdates(Jersey3ReplicationClient.java:116)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:483)
+	... 16 common frames omitted
+2025-12-24 05:56:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 39ms
+2025-12-24 05:57:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 13ms
+2025-12-24 05:58:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2025-12-24 05:59:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 06:00:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 06:01:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 06:02:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:03:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:04:28 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 10
+2025-12-24 06:04:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:05:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:06:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:07:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:08:18 ERROR c.n.e.c.ReplicationTaskProcessor - It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+jakarta.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read timed out
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:531)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:662)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:661)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:439)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:345)
+	at com.netflix.eureka.transport.Jersey3ReplicationClient.submitBatchUpdates(Jersey3ReplicationClient.java:116)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.glassfish.jersey.apache.connector.ApacheConnector.apply(ApacheConnector.java:483)
+	... 16 common frames omitted
+2025-12-24 06:08:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2025-12-24 06:09:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2025-12-24 06:10:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:11:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:12:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:13:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:14:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:15:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2025-12-24 06:16:30 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms

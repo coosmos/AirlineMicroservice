@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "bc60823f-7124-4def-b54e-0f7b202b065b",
+		"name": "FlightMicroservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40718754",
+		"_collection_link": "https://ashutoshhh.postman.co/workspace/Ashutoshhh-Workspace~5224f025-663c-4392-a913-85cb92c2142d/collection/40718754-bc60823f-7124-4def-b54e-0f7b202b065b?action=share&source=collection_link&creator=40718754"
+	},
+	"item": [
+		{
+			"name": "flightService",
+			"item": [
+				{
+					"name": "healthCheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"flightNumber\": \"AI-302\",\r\n  \"airline\": \"Air India\",\r\n  \"source\": \"DEL\",\r\n  \"destination\": \"MUM\",\r\n  \"departureTime\": \"2025-12-20T10:30:00\",\r\n  \"arrivalTime\": \"2025-12-20T12:45:00\",\r\n  \"price\": 5899.50,\r\n  \"totalSeats\": 180\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/flight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllFlight",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/flight",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchFlight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"source\": \"DEL\",\r\n  \"destination\": \"MUM\",\r\n  \"date\": \"2025-12-20\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/flight/search",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BookingService",
+			"item": [
+				{
+					"name": "CreateBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"flightNumber\": \"AI-302\",\r\n  \"passengers\": [\r\n    {\r\n      \"firstName\": \"Ashutosh\",\r\n      \"lastName\": \"Singh\",\r\n      \"age\": 24,\r\n      \"gender\": \"Male\",\r\n      \"email\": \"ashu@gmail.com\",\r\n      \"phoneNumber\": \"9876543210\"\r\n    },\r\n    {\r\n      \"firstName\": \"Riya\",\r\n      \"lastName\": \"Sharma\",\r\n      \"age\": 22,\r\n      \"gender\": \"Female\",\r\n      \"email\": \"riya@gmail.com\",\r\n      \"phoneNumber\": \"9123456780\"\r\n    }\r\n  ],\r\n  \"contactEmail\": \"primarybooker@gmail.com\",\r\n  \"contactPhone\": \"9998887776\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/bookings",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllBookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/bookings",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookingbyPNR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/bookings/PNR3NTRV5",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"PNR3NTRV5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
