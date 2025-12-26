@@ -40,6 +40,10 @@ This project handles the full workflow from **searching flights → booking → 
 
 <img width="1734" height="924" alt="image" src="https://github.com/user-attachments/assets/15c27e0f-cfba-455a-8887-39eafc033a50" />
 
+## ran pipeline on jenkins
+<img width="1807" height="1016" alt="image" src="https://github.com/user-attachments/assets/9c55ecd1-6030-45c5-a57d-eb19ce823f95" />
+
+
 ##  Architecture Overview
 
 This project contains **5 microservices + Kafka**:
