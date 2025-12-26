@@ -13,9 +13,10 @@ import com.airline.auth.repository.RoleRepository;
 import com.airline.auth.repository.UserRepository;
 import com.airline.auth.security.jwt.JwtUtils;
 import com.airline.auth.security.service.UserDetailsImpl;
+import com.airline.auth.validation.PasswordValidator;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -31,119 +32,128 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
 
     @Autowired
-    AuthenticationManager authenticationManager;
+    private AuthenticationManager authenticationManager;
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    RoleRepository roleRepository;
+    private RoleRepository roleRepository;
 
     @Autowired
-    PasswordEncoder encoder;
+    private PasswordEncoder encoder;
 
     @Autowired
-    JwtUtils jwtUtils;
+    private JwtUtils jwtUtils;
 
     @Value("${security.password.expiry-days}")
     private long passwordExpiryDays;
+
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+
         Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
+                new UsernamePasswordAuthenticationToken(
+                        loginRequest.getUsername(),
+                        loginRequest.getPassword()
+                )
+        );
+
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-        User user=userRepository.findByUsername((userDetails.getUsername()))
-                .orElseThrow(()->new RuntimeException("Username not found"));
+        UserDetailsImpl userDetails =
+                (UserDetailsImpl) authentication.getPrincipal();
 
-        //password expiry logic , chronounit helps with time caluclation without getting messy
-        long lastpasswordChange= ChronoUnit.DAYS.between(
-                user.getPasswordLastChanged(),LocalDateTime.now()
+        User user = userRepository.findByUsername(userDetails.getUsername())
+                .orElseThrow(() -> new RuntimeException("Username not found"));
+
+        long daysSinceChange = ChronoUnit.DAYS.between(
+                user.getPasswordLastChanged(),
+                LocalDateTime.now()
         );
-        boolean passwordExpired=lastpasswordChange >=passwordExpiryDays;
-        String jwt = jwtUtils.generateJwtToken(authentication,passwordExpired);
-        System.out.println("password expired for " + user.getUsername()+ " "+passwordExpired);
 
-        List<String> roles = userDetails.getAuthorities().stream()
-                .map(item -> item.getAuthority())
+        boolean passwordExpired = daysSinceChange >= passwordExpiryDays;
+
+        String jwt = jwtUtils.generateJwtToken(authentication, passwordExpired);
+
+        List<String> roles = userDetails.getAuthorities()
+                .stream()
+                .map(a -> a.getAuthority())
                 .collect(Collectors.toList());
-        return ResponseEntity.ok(new JwtResponse(jwt,
-                userDetails.getId(),
-                userDetails.getUsername(),
-                userDetails.getEmail(),
-                roles));
+
+        return ResponseEntity.ok(
+                new JwtResponse(
+                        jwt,
+                        userDetails.getId(),
+                        userDetails.getUsername(),
+                        userDetails.getEmail(),
+                        roles,
+                        passwordExpired
+                )
+        );
     }
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
-            return ResponseEntity
-                    .badRequest()
-                    .body(new MessageResponse("Error: Username is already taken!"));
+            return ResponseEntity.badRequest()
+                    .body(new MessageResponse("Error: Username is already taken"));
         }
         if (userRepository.existsByEmail(signUpRequest.getEmail())) {
-            return ResponseEntity
-                    .badRequest()
-                    .body(new MessageResponse("Error: Email is already in use!"));
+            return ResponseEntity.badRequest()
+                    .body(new MessageResponse("Error: Email is already in use"));
         }
-        // Create new user's account
-        User user = new User(signUpRequest.getUsername(),
+        if (!PasswordValidator.isValid(signUpRequest.getPassword())) {
+            return ResponseEntity.badRequest()
+                    .body(new MessageResponse(
+                            "Password must be at least 6 characters long and contain at least one number"
+                    ));
+        }
+        User user = new User(
+                signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
-                encoder.encode(signUpRequest.getPassword()));
+                encoder.encode(signUpRequest.getPassword())
+        );
         user.setPasswordLastChanged(LocalDateTime.now());
-        Set<String> strRoles = signUpRequest.getRoles();
         Set<Role> roles = new HashSet<>();
-        if (strRoles == null || strRoles.isEmpty()) {
-            Role userRole = roleRepository.findByName(ERole.ROLE_USER)
-                    .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-            roles.add(userRole);
+        if (signUpRequest.getRoles() == null || signUpRequest.getRoles().isEmpty()) {
+            roles.add(roleRepository.findByName(ERole.ROLE_USER)
+                    .orElseThrow(() -> new RuntimeException("Role not found")));
         } else {
-            strRoles.forEach(role -> {
-                switch (role.toLowerCase()) {
-                    case "admin":
-                        Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
-                                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-                        roles.add(adminRole);
-                        break;
-                    default:
-                        Role userRole = roleRepository.findByName(ERole.ROLE_USER)
-                                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-                        roles.add(userRole);
+            for (String role : signUpRequest.getRoles()) {
+                if ("admin".equalsIgnoreCase(role)) {
+                    roles.add(roleRepository.findByName(ERole.ROLE_ADMIN)
+                            .orElseThrow(() -> new RuntimeException("Role not found")));
+                } else {
+                    roles.add(roleRepository.findByName(ERole.ROLE_USER)
+                            .orElseThrow(() -> new RuntimeException("Role not found")));
                 }
-            });
+            }
         }
-
         user.setRoles(roles);
         userRepository.save(user);
-
-        return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+        return ResponseEntity.ok(new MessageResponse("User registered successfully"));
     }
 
-    //adding endpoint for fetching user name , email , and roles
-    // adding endpoint to update username
-    // adding endpoint to update password
     @PutMapping("/user-profile")
     public ResponseEntity<?> updateProfile(
             @Valid @RequestBody UpdateProfileRequest request) {
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl currentUser = (UserDetailsImpl) auth.getPrincipal();
-        String newUsername = request.getNewUsername();
-        if (userRepository.existsByUsername(newUsername)) {
+        if (userRepository.existsByUsername(request.getNewUsername())) {
             return ResponseEntity.badRequest()
                     .body(new MessageResponse("Username already taken"));
         }
         User user = userRepository.findByUsername(currentUser.getUsername())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        user.setUsername(newUsername);
+        user.setUsername(request.getNewUsername());
         userRepository.save(user);
-        //  regenerate authentication + JWT
         Authentication newAuth = new UsernamePasswordAuthenticationToken(
                 UserDetailsImpl.build(user),
                 null,
@@ -153,18 +163,20 @@ public class AuthController {
                 user.getPasswordLastChanged(),
                 LocalDateTime.now()
         ) >= passwordExpiryDays;
-
         String newToken = jwtUtils.generateJwtToken(newAuth, passwordExpired);
-cool
-        return ResponseEntity.ok(new JwtResponse(
-                newToken,
-                user.getId(),
-                user.getUsername(),
-                user.getEmail(),
-                currentUser.getAuthorities().stream()
-                        .map(a -> a.getAuthority())
-                        .toList()
-        ));
+        return ResponseEntity.ok(
+                new JwtResponse(
+                        newToken,
+                        user.getId(),
+                        user.getUsername(),
+                        user.getEmail(),
+                        currentUser.getAuthorities()
+                                .stream()
+                                .map(a -> a.getAuthority())
+                                .toList(),
+                        passwordExpired
+                )
+        );
     }
 
     @PutMapping("/user-change-password")
@@ -178,12 +190,15 @@ cool
             return ResponseEntity.badRequest()
                     .body(new MessageResponse("Old password is incorrect"));
         }
+        if (!PasswordValidator.isValid(request.getNewPassword())) {
+            return ResponseEntity.badRequest()
+                    .body(new MessageResponse(
+                            "Password must be at least 6 characters long and contain at least one number"
+                    ));
+        }
         user.setPassword(encoder.encode(request.getNewPassword()));
+        user.setPasswordLastChanged(LocalDateTime.now());
         userRepository.save(user);
-        return ResponseEntity.ok(
-                new MessageResponse("Password updated successfully")
-        );
+        return ResponseEntity.ok(new MessageResponse("Password updated successfully"));
     }
-
-    // authenticate user
 }
